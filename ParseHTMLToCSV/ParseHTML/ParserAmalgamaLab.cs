@@ -17,7 +17,10 @@ namespace ParseHTML
             var config = Configuration.Default.WithDefaultLoader();
             // асинхронно загружаем страницу
             var document = await BrowsingContext.New(config).OpenAsync(address);
-
+            if (document.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                return null;
+            }
             AmalgamaLab result = new AmalgamaLab(address);
             ////--Группа
             var cellSelector = @"div#songs_nav a";

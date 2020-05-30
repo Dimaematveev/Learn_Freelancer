@@ -22,9 +22,13 @@ namespace ParseHTML
             {
                 Console.WriteLine($"{path}");
                 var amalgamaLab = parser.GetSong(path).Result;
-                amalgamaLab.ToConsole();
-                amalgamaLab.SaveCSV();
-                Console.WriteLine(amalgamaLab.NameCSV);
+                if (amalgamaLab!=null)
+                {
+                    amalgamaLab.ToConsole();
+                    amalgamaLab.SaveCSV();
+                    Console.WriteLine(amalgamaLab.NameCSV);
+                }
+               
             }
            
             
