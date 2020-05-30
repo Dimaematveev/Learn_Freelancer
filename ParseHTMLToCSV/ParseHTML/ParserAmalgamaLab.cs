@@ -22,11 +22,13 @@ namespace ParseHTML
 
             AmalgamaLab result = new AmalgamaLab();
 
+
+
             ////--Группа
             var cellSelector = @"div#songs_nav a";
             var cell = document.QuerySelector(cellSelector);
-            result.Group = cell.TextContent.Trim();
-
+            result.NameGroup = cell.TextContent.Trim();
+            result.NameGroup = result.NameGroup.TrimEnd(':');
 
             ////--Название песни
             cellSelector = @"div#songs_nav li.active";
@@ -34,8 +36,8 @@ namespace ParseHTML
             result.NameSong = cell.TextContent.Trim();
 
 
-            //--Оригинальный текст
             cellSelector = @"div#click_area div.string_container div.";
+            //--Оригинальный текст
             var cells = document.QuerySelectorAll(cellSelector + "original");
             var pars = cells.Select(m => m.TextContent.Trim());
             result.Original = new List<string>(pars);

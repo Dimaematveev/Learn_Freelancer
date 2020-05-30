@@ -17,18 +17,7 @@ namespace ParseHTML
             ParserAmalgamaLab parser = new ParserAmalgamaLab();
             var amalgamaLab = parser.GetSong("https://www.amalgama-lab.com/songs/l/little_big/uno.html").Result;
 
-         
-
-            Console.WriteLine($"Заголовок песни: {amalgamaLab.NameSong}");
-            Console.WriteLine(new string('=', 20));
-
-            
-            Console.WriteLine("Песня статьи:");
-            for (int i = 0; i < amalgamaLab.Original.Count; i++)
-            {
-                Console.WriteLine($"{amalgamaLab.Original[i]} ; {amalgamaLab.Translate[i]}");
-            }
-
+            amalgamaLab.ToConsole();
             Console.ReadLine();
         }
     }
