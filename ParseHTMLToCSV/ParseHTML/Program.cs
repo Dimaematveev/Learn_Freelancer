@@ -18,6 +18,8 @@ namespace ParseHTML
             var amalgamaLab = parser.GetSong("https://www.amalgama-lab.com/songs/l/little_big/uno.html").Result;
 
             amalgamaLab.ToConsole();
+            amalgamaLab.SaveCSV();
+            Console.WriteLine(amalgamaLab.NameCSV);
             Console.ReadLine();
         }
     }
