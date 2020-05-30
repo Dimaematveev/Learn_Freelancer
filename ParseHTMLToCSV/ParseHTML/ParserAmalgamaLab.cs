@@ -15,22 +15,15 @@ namespace ParseHTML
         {
             // конфигурация
             var config = Configuration.Default.WithDefaultLoader();
-            // 
-            //var address = "https://www.amalgama-lab.com/songs/l/little_big/uno.html";
             // асинхронно загружаем страницу
             var document = await BrowsingContext.New(config).OpenAsync(address);
 
-
             AmalgamaLab result = new AmalgamaLab(address);
-
-
-
             ////--Группа
             var cellSelector = @"div#songs_nav a";
             var cell = document.QuerySelector(cellSelector);
             result.NameGroup = GetTextNotChild(cell).Trim();
             result.NameGroup = result.NameGroup.TrimEnd(':');
-
             ////--Название песни оригинал
             cellSelector = @"div.texts.col h2.original";
             cell = document.QuerySelector(cellSelector);
@@ -55,15 +48,11 @@ namespace ParseHTML
 
         private string GetTextNotChild(IElement element)
         {
-            string ret = "";
-            ret = element.TextContent;
-
-            
+            string ret = element.TextContent;
             foreach (var children in element.Children)
             {
                 ret = ret.Replace(children.TextContent, "");
             }
-
             return ret;
         }
     }

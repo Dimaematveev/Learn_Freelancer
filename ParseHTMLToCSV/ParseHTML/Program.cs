@@ -8,18 +8,26 @@ namespace ParseHTML
     */
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("==ConsoleApp2==");
-            Console.WriteLine();
-
-
             ParserAmalgamaLab parser = new ParserAmalgamaLab();
-            var amalgamaLab = parser.GetSong("https://www.amalgama-lab.com/songs/l/little_big/uno.html").Result;
 
-            amalgamaLab.ToConsole();
-            amalgamaLab.SaveCSV();
-            Console.WriteLine(amalgamaLab.NameCSV);
+            string[] paths = new string[]
+            {
+                "https://www.amalgama-lab.com/songs/l/little_big/uno.html",
+                "https://www.amalgama-lab.com/songs/n/n_dubz/playing_with_fire.html",
+            };
+
+            foreach (var path in paths)
+            {
+                Console.WriteLine($"{path}");
+                var amalgamaLab = parser.GetSong(path).Result;
+                amalgamaLab.ToConsole();
+                amalgamaLab.SaveCSV();
+                Console.WriteLine(amalgamaLab.NameCSV);
+            }
+           
+            
             Console.ReadLine();
         }
     }

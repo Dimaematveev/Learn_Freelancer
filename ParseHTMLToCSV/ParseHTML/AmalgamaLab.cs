@@ -26,10 +26,7 @@ namespace ParseHTML
 
         public void ToConsole()
         {
-
-
             Console.WriteLine($"Название группы: {NameGroup}");
-            
             Console.WriteLine(new string('=', 20));
             Console.WriteLine("Песня:");
             int maxOrig = Original.Max(x=>x.Length);
@@ -42,14 +39,13 @@ namespace ParseHTML
                 Console.WriteLine($"|{Original[i].PadRight(maxOrig)} | {Translate[i].PadRight(maxTrans)}|");
             }
             Console.WriteLine($"|{new string('_', maxOrig + 1)}|{new string('_', maxTrans + 1)}|");
-
         }
 
         public async void SaveCSV()
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(NameCSV, false, System.Text.Encoding.Default))
+                using (StreamWriter sw = new StreamWriter($"Files/{NameCSV}", false, System.Text.Encoding.Default))
                 {
                     for (int i = 0; i < NumberString; i++)
                     {
@@ -57,7 +53,7 @@ namespace ParseHTML
                     }
                 }
 
-                Console.WriteLine("Запись выполнена");
+                Console.WriteLine($"Запись выполнена в {Path.GetFullPath($"Files/{NameCSV}")}");
             }
             catch (Exception e)
             {
