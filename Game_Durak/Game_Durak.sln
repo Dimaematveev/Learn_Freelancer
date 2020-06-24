@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Durak.BL", "Game_Durak.BL\Game_Durak.BL.csproj", "{914C25FA-A901-45C4-9729-F8FBADA21BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Durak.C", "Game_Durak.C\Game_Durak.C.csproj", "{F49737D4-5664-4239-85E0-CF04BADFFCF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{914C25FA-A901-45C4-9729-F8FBADA21BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914C25FA-A901-45C4-9729-F8FBADA21BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914C25FA-A901-45C4-9729-F8FBADA21BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914C25FA-A901-45C4-9729-F8FBADA21BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49737D4-5664-4239-85E0-CF04BADFFCF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49737D4-5664-4239-85E0-CF04BADFFCF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49737D4-5664-4239-85E0-CF04BADFFCF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49737D4-5664-4239-85E0-CF04BADFFCF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {387E7A05-4BF7-4972-9FE9-0DFE1C2293F4}
+	EndGlobalSection
+EndGlobal
