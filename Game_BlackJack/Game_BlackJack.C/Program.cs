@@ -10,6 +10,14 @@ namespace Game_BlackJack.C
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("BEGIN!!!!!!");
+
+            Deck deck = new Deck();
+            deck.GetCard();
+
+            Console.WriteLine("END!!!!!!!!");
+            Console.ReadLine();
         }
     }
+
 }
