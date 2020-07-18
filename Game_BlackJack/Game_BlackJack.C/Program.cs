@@ -10,10 +10,12 @@ namespace Game_BlackJack.C
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("BEGIN!!!!!!");
+            var g =new Game();
+            g.StartGame();
 
-            Deck deck = new Deck();
-            deck.GetCard();
+
 
             Console.WriteLine("END!!!!!!!!");
             Console.ReadLine();
